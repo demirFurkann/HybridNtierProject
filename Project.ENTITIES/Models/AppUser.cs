@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
+    //Burada miras aldıgımız sınıf bir Identity sınıfıdır...Identity'deki User tablosunun kendisini temsil eder biz oradan miras olarak normalde orada olusacak özellikleri de kendi AppUser sınıfımıza aktarıyoruz ve aslında Identity'de User'a müdahale ediyoruz...Generic'teki int ifadesi ise primary key'imiz Identity'de int olacagını bildirir...
     public class AppUser : IdentityUser<int>, IEntity
     {
         public int ID { get; set; }
@@ -19,7 +20,7 @@ namespace Project.ENTITIES.Models
 
         //Relational Properties
 
-        public virtual AppUserProfile AppUserProfile { get; set; 
+        public virtual AppUserProfile Profile { get; set; }
         public virtual List<Order> Orders { get; set; }
     }
 }

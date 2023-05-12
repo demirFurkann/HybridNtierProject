@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.CoreInterfaces
 {
-    internal interface IEntity
+    public interface IEntity
     {
         public int ID { get; set; }
         public DateTime CreatedDate { get; set; }
