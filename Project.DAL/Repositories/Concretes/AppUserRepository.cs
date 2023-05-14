@@ -26,7 +26,7 @@ namespace Project.DAL.Repositories.Concretes
             IdentityResult result = await _userManager.CreateAsync(item,item.PasswordHash);
             if (result.Succeeded)
             {
-                await _signInManager.SignInAsync(item,, isPersistent: false);
+                await _signInManager.SignInAsync(item, isPersistent: false);
                 return true;
             }
             return false;
